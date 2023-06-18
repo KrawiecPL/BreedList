@@ -1,0 +1,52 @@
+.breedsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.breedsList h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.breedsList ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  gap: 20px;
+}
+
+.breedsList ul a li,
+.breedsList button {
+  padding: 20px;
+  background: white;
+  width: max-content;
+  border-radius: 25px;
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.breedsList ul a li:hover,
+.breedsList button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.breedsList ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.breedsList button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  font-size: 20px;
+  margin-top: 50px;
+}
