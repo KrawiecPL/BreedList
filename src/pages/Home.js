@@ -43,8 +43,8 @@ const Home = () => {
 
   const handleClick = () => {
     let newCount = count + 5;
-    if (newCount > this.state.breedsArr.length) {
-      newCount = this.state.breedsArr.length;
+    if (newCount > breedsArr.length) {
+      newCount = breedsArr.length;
     }
     setCount(newCount);
   };
