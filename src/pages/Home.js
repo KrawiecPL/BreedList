@@ -41,8 +41,8 @@ const Home = () => {
 
     const checkScrollPosition = () => {
       if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
+        window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - 10
       ) {
         handleScroll();
       }
