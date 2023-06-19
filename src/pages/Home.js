@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Dog from "../components/Dog";
-import Button from "../components/Button";
 import "../styles/Home.css";
 
 const Home = () => {
@@ -39,9 +38,20 @@ const Home = () => {
       }
     };
     xhr.send();
+
+    const checkScrollPosition = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop ===
+        document.documentElement.offsetHeight
+      ) {
+        handleScroll();
+      }
+    };
+    window.addEventListener("scroll", checkScrollPosition);
+    return () => window.removeEventListener("scroll", checkScrollPosition);
   });
 
-  const handleClick = () => {
+  const handleScroll = () => {
     let newCount = count + 5;
     if (newCount > breedsArr.length) {
       newCount = breedsArr.length;
@@ -58,9 +68,6 @@ const Home = () => {
     <div className="breedsList">
       <h1>Breed list</h1>
       <ul>{dogs}</ul>
-      {count >= breedsArr.length ? undefined : (
-        <Button click={handleClick} content="Load more" />
-      )}
     </div>
   );
 };
